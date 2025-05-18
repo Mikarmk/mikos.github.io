@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каримов Мурат - OS Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="os-container">
+        <!-- Рабочий стол -->
+        <div class="desktop">
+            <!-- Иконки рабочего стола -->
+            <div class="desktop-icon" data-window="about">
+                <i class="fas fa-user"></i>
+                <span>Обо мне</span>
+            </div>
+            <div class="desktop-icon" data-window="education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Образование</span>
+            </div>
+            <div class="desktop-icon" data-window="achievements">
+                <i class="fas fa-trophy"></i>
+                <span>Достижения</span>
+            </div>
+            <div class="desktop-icon" data-window="tools">
+                <i class="fas fa-tools"></i>
+                <span>Инструменты</span>
+            </div>
+            <div class="desktop-icon" data-window="experience">
+                <i class="fas fa-briefcase"></i>
+                <span>Опыт работы</span>
+            </div>
+            <div class="desktop-icon" data-window="portfolio">
+                <i class="fas fa-folder-open"></i>
+                <span>Портфолио</span>
+            </div>
+            <div class="desktop-icon" data-window="contact">
+                <i class="fas fa-address-book"></i>
+                <span>Контакты</span>
+            </div>
+
+            <!-- Окна -->
+            <div class="window" id="about">
+                <div class="window-header">
+                    <div class="window-title">Обо мне</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="about-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            <i class="fas fa-user-circle profile-icon"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Каримов Мурат</h2>
+                            <p class="job-title">Digital Product Designer</p>
+                            <p><span class="label">Телефон:</span> +7 917 857 2553</p>
+                            <p><span class="label">Email:</span> mikarkari@gmail.com</p>
+                            <p><span class="label">Telegram:</span> mikarmk</p>
+                            <p><span class="label">VK:</span> mikarka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="education">
+                <div class="window-header">
+                    <div class="window-title">Образование</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="education-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="education-item">
+                        <h3>Информационные системы и программирование</h3>
+                        <p>КНИТУ-КАИ КИТ 2022 - 2026, Казань</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Технологии управления клиентским опытом</h3>
+                        <p>RUDN University 2024</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Проектирование цифровых образовательных продуктов</h3>
+                        <p>RUDN University 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="achievements">
+                <div class="window-header">
+                    <div class="window-title">Достижения</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="achievements-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <ul class="achievements-list">
+                        <li><span class="achievement-name">KAZAN DIGITAL LEGENDS</span> <span class="achievement-place">1 место (2024)</span></li>
+                        <li><span class="achievement-name">Хакатон Art Science</span> <span class="achievement-place">1 место (2024)</span></li>
+                        <li><span class="achievement-name">Tatar.Бу Хакатон</span> <span class="achievement-place">1 место (2024)</span></li>
+                        <li><span class="achievement-name">Весенний Хакатон</span> <span class="achievement-place">1 место (2024)</span></li>
+                        <li><span class="achievement-name">TenderHack (UX/UI)</span> <span class="achievement-place">3 место (2024)</span></li>
+                        <li><span class="achievement-name">Worldskills (юниоры)</span> <span class="achievement-place">3 место (2021)</span></li>
+                        <li><span class="achievement-name">Профессионалы</span> <span class="achievement-place">3 место (2023)</span></li>
+                        <li><span class="achievement-name">Профессионалы Самары</span> <span class="achievement-place">2 степень веб дизайн (2025)</span></li>
+                        <li><span class="achievement-name">IT Cup</span> <span class="achievement-place">High Quality Award (2025)</span></li>
+                    </ul>
+                    <h3>Финалист:</h3>
+                    <ul class="achievements-list">
+                        <li>MTS True Tech Champ (2023)</li>
+                        <li>ДвижИТ (Пенза) (2023)</li>
+                        <li>Kazan Digital Transformation (2024)</li>
+                        <li>Зеленый код Москвы (2024)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="window" id="tools">
+                <div class="window-header">
+                    <div class="window-title">Инструменты</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="tools-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="tools-category">
+                        <h3>Дизайн</h3>
+                        <p>Figma, Photoshop, Illustrator, Sketch, Balsamiq, Adobe XD, Framer, Principle, Blender (начинающий), Premiere Pro, Procreate, Affinity Designer, Inkscape.</p>
+                    </div>
+                    <div class="tools-category">
+                        <h3>Аналитика и код</h3>
+                        <p>Visual Studio Code, WebStorm, FigJam, Google Analytics, Git, Postman, FastAPI, Flask.</p>
+                    </div>
+                    <div class="tools-category">
+                        <h3>Типографика</h3>
+                        <p>FontLab 8, Patternodes, Glyphr Studio.</p>
+                    </div>
+                    <div class="tools-category">
+                        <h3>Презентации</h3>
+                        <p>PowerPoint, Keynote.</p>
+                    </div>
+                    <div class="tools-category">
+                        <h3>AI инструменты</h3>
+                        <p>Stable Diffusion, llama, n8n, Midjourney, RunwayML.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="experience">
+                <div class="window-header">
+                    <div class="window-title">Опыт работы</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="experience-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="experience-item">
+                        <h3>Iketel Digital Product Designer</h3>
+                        <p class="experience-date">Январь 2025, проект</p>
+                        <p class="experience-description">«Икетел» — игровое приложение для детей по изучению татарского языка</p>
+                        <ul class="experience-responsibilities">
+                            <li>Разработка яркого и увлекательного интерфейса в стиле Duolingo, ориентированного на детей</li>
+                            <li>Проектирование игровых механик, включая уровни, награды и персонажей, чтобы обучение было интересным и мотивирующим</li>
+                            <li>Проведение исследований пользователей с фокусом на детскую аудиторию (глубинные интервью, наблюдения) для адаптации контента под возрастные особенности</li>
+                            <li>Разработка дизайн-системы для обеспечения последовательности и масштабируемости приложения</li>
+                            <li>Тесное взаимодействие с командой разработки для интеграции игровых элементов и создания интуитивно понятного UX</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Tut-lms UX/UI designer</h3>
+                        <p class="experience-date">С января 2024 - по январь 2025, проектная работа</p>
+                        <p class="experience-description">LMS с ИИ-менторами и генерацией курсов</p>
+                        <ul class="experience-responsibilities">
+                            <li>Разработка интуитивного UI для мобильных и десктопных платформ</li>
+                            <li>Проведение исследований (customer development, глубинные и количественные исследования) для выявления ключевых потребностей пользователей и формирования продуктовых решений</li>
+                            <li>Создание вайрфреймов, прототипов и дизайн-спецификаций для визуализации концепций и сбора обратной связи</li>
+                            <li>Разработка и поддержка цифровых дизайн-систем для обеспечения единообразного и масштабируемого решения</li>
+                            <li>Тесное взаимодействие с командой разработки с использованием данных и бизнес-метрик для обоснованных дизайн-решений</li>
+                            <li>Разработка и последующее обновление UI KIT и создание презентанций</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Портал поставщиков - маскот в ux/ui</h3>
+                        <p class="experience-date">2024 - кейс</p>
+                        <p class="experience-description">Разработка маскота для «Портала поставщиков» в рамках хакатона</p>
+                        <ul class="experience-responsibilities">
+                            <li>Проанализировал бизнес-потребности, фирменный стиль и целевую аудиторию проекта</li>
+                            <li>Разработал и визуализировал маскота в 2D-формате</li>
+                            <li>Проработал сценарий, в котором маскот участвует в бизнес-процессах портала, предложил возможный дополнительный функционал</li>
+                            <li>Создал примеры использования маскота в онлайн и офлайн маркетинговых коммуникациях</li>
+                            <li>Презентовал проект перед жюри и экспертами хакатона</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="portfolio">
+                <div class="window-header">
+                    <div class="window-title">Портфолио</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="portfolio-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="portfolio-links">
+                        <div class="portfolio-link">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/Mikarmk" target="_blank">GitHub: @mikarmk</a>
+                        </div>
+                        <div class="portfolio-link">
+                            <i class="fab fa-behance"></i>
+                            <a href="https://www.behance.net/muratkarimov" target="_blank">Behance: @muratkarimov</a>
+                        </div>
+                        <div class="portfolio-link">
+                            <i class="fas fa-globe"></i>
+                            <a href="https://mikarmk.github.io/mikdev.github.io/" target="_blank">mikarmk.github.io/mikdev.github.io/</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window" id="contact">
+                <div class="window-header">
+                    <div class="window-title">Контакты</div>
+                    <div class="window-controls">
+                        <button class="minimize">_</button>
+                        <button class="maximize">□</button>
+                        <button class="close">×</button>
+                    </div>
+                </div>
+                <!-- Контекстное меню для окна -->
+                <div class="window-context-menu" id="contact-context-menu">
+                    <div class="context-menu-item window-restore">Восстановить</div>
+                    <div class="context-menu-item window-move">Переместить</div>
+                    <div class="context-menu-item window-size">Размер</div>
+                    <div class="context-menu-item window-minimize">Свернуть</div>
+                    <div class="context-menu-item window-maximize">Развернуть</div>
+                    <div class="context-menu-divider"></div>
+                    <div class="context-menu-item window-close">Закрыть</div>
+                </div>
+                <div class="window-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+7 917 857 2553</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>mikarkari@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <p>TG: mikarmk</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-vk"></i>
+                            <p>VK: mikarka</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Отправить сообщение</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Имя:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение:</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя панель (taskbar) -->
+        <div class="taskbar">
+            <div class="start-button">
+                <i class="fas fa-laptop-code start-icon"></i>
+                <span>Меню</span>
+            </div>
+            <div class="taskbar-items">
+                <div class="taskbar-item active">Портфолио.exe</div>
+            </div>
+            <div class="system-tray">
+                <div class="time" id="current-time">12:00</div>
+            </div>
+        </div>
+
+        <!-- Стартовое меню -->
+        <div class="start-menu" id="start-menu">
+            <div class="start-menu-header">
+                <div class="start-menu-user">
+                    <i class="fas fa-user-circle start-menu-avatar"></i>
+                    <span>Каримов Мурат</span>
+                </div>
+            </div>
+            <div class="start-menu-items">
+                <div class="start-menu-item" data-window="about">
+                    <i class="fas fa-user"></i>
+                    <span>Обо мне</span>
+                </div>
+                <div class="start-menu-item" data-window="education">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Образование</span>
+                </div>
+                <div class="start-menu-item" data-window="achievements">
+                    <i class="fas fa-trophy"></i>
+                    <span>Достижения</span>
+                </div>
+                <div class="start-menu-item" data-window="tools">
+                    <i class="fas fa-tools"></i>
+                    <span>Инструменты</span>
+                </div>
+                <div class="start-menu-item" data-window="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Опыт работы</span>
+                </div>
+                <div class="start-menu-item" data-window="portfolio">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Портфолио</span>
+                </div>
+                <div class="start-menu-item" data-window="contact">
+                    <i class="fas fa-address-book"></i>
+                    <span>Контакты</span>
+                </div>
+                <div class="start-menu-divider"></div>
+                <div class="start-menu-item" id="shutdown">
+                    <i class="fas fa-power-off"></i>
+                    <span>Выключить</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контекстное меню для окон (шаблон) -->
+        <div class="window-context-menu-template" style="display: none;">
+            <div class="context-menu-item window-restore">Восстановить</div>
+            <div class="context-menu-item window-move">Переместить</div>
+            <div class="context-menu-item window-size">Размер</div>
+            <div class="context-menu-item window-minimize">Свернуть</div>
+            <div class="context-menu-item window-maximize">Развернуть</div>
+            <div class="context-menu-divider"></div>
+            <div class="context-menu-item window-close">Закрыть</div>
+        </div>
+    </div>
+
+    <!-- Загрузочный экран -->
+    <div class="boot-screen" id="boot-screen">
+        <div class="boot-content">
+            <div class="boot-logo">Mik OS</div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <div class="boot-message">Загрузка системы...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

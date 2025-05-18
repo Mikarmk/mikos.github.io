@@ -1,0 +1,654 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: #008080;
+    color: #000;
+    font-size: 16px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.os-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Загрузочный экран */
+.boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.boot-content {
+    text-align: center;
+}
+
+.boot-logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+.boot-progress {
+    width: 300px;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid #0f0;
+    margin: 0 auto 1rem;
+}
+
+.boot-progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #0f0;
+    transition: width 1.5s ease-in-out;
+}
+
+.boot-message {
+    font-size: 1.2rem;
+    color: #0f0;
+}
+
+/* Панель задач (taskbar) */
+.taskbar {
+    height: 40px;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    z-index: 100;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    padding: 2px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.start-button:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.start-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #000080;
+}
+
+.taskbar-items {
+    flex: 1;
+    display: flex;
+}
+
+.taskbar-item {
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    padding: 2px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.taskbar-item.active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background-color: #d3d3d3;
+}
+
+.system-tray {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    background-color: #c0c0c0;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 2px 10px;
+}
+
+/* Рабочий стол */
+.desktop {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    background-image: url('images/обои.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Иконки рабочего стола в стиле Windows 95 */
+.desktop-icon {
+    width: 80px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(0, 0, 128, 0.3);
+}
+
+.desktop-icon i {
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #000;
+    background-color: #c0c0c0;
+    border: 1px solid #808080;
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #555 inset;
+}
+
+.desktop-icon span {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 14px;
+}
+
+/* Окна */
+.window {
+    position: absolute;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    min-width: 400px;
+    min-height: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    resize: both;
+    overflow: auto;
+    z-index: 10;
+}
+
+.window.active {
+    z-index: 20;
+}
+
+.window-header {
+    background-color: #000080;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: move;
+}
+
+.window-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-controls button {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.window-controls button:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.window-content {
+    padding: 15px;
+    overflow: auto;
+    max-height: calc(100% - 30px);
+}
+
+/* Стартовое меню */
+.start-menu {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 250px;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: none;
+    z-index: 200;
+}
+
+.start-menu-header {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #fff;
+    padding: 10px;
+}
+
+.start-menu-user {
+    display: flex;
+    align-items: center;
+}
+
+.start-menu-avatar {
+    font-size: 40px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.start-menu-items {
+    padding: 5px;
+}
+
+.start-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.start-menu-item:hover {
+    background-color: #000080;
+    color: #fff;
+}
+
+.start-menu-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    width: 24px;
+    text-align: center;
+}
+
+.start-menu-item:hover i {
+    color: #fff;
+}
+
+.start-menu-divider {
+    height: 1px;
+    background-color: #808080;
+    margin: 5px 0;
+}
+
+/* Стили для содержимого окон */
+/* Обо мне */
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-image {
+    margin-right: 20px;
+}
+
+.profile-icon {
+    font-size: 150px;
+    color: #000080;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+    color: #000080;
+}
+
+.job-title {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* Образование */
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+/* Достижения */
+.achievements-list {
+    list-style-type: none;
+}
+
+.achievements-list li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.achievement-name {
+    font-weight: bold;
+}
+
+.achievement-place {
+    color: #008000;
+}
+
+/* Инструменты */
+.tools-category {
+    margin-bottom: 20px;
+}
+
+.tools-category h3 {
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+/* Опыт работы */
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.experience-item h3 {
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.experience-date {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #808080;
+}
+
+.experience-description {
+    margin-bottom: 10px;
+}
+
+.experience-responsibilities {
+    margin-left: 20px;
+}
+
+.experience-responsibilities li {
+    margin-bottom: 5px;
+}
+
+/* Портфолио */
+.portfolio-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.portfolio-link i {
+    font-size: 32px;
+    margin-right: 10px;
+    color: #000080;
+}
+
+.portfolio-link a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.portfolio-link a:hover {
+    text-decoration: underline;
+}
+
+/* Контакты */
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #000080;
+}
+
+.contact-form h3 {
+    color: #000080;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Контекстное меню для окон */
+.window-context-menu {
+    position: absolute;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    width: 150px;
+    display: none;
+    z-index: 300;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.context-menu-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.context-menu-item:hover {
+    background-color: #000080;
+    color: #fff;
+}
+
+.context-menu-divider {
+    height: 1px;
+    background-color: #808080;
+    margin: 2px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .window {
+        min-width: 300px;
+        width: 90% !important;
+        height: 80% !important;
+        left: 5% !important;
+        top: 10% !important;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .desktop-icon {
+        width: 70px;
+        height: 80px;
+    }
+    
+    .desktop-icon i {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .desktop-icon span {
+        font-size: 12px;
+    }
+    
+    .taskbar {
+        height: 50px;
+    }
+    
+    .start-button {
+        padding: 2px 8px;
+    }
+    
+    .window-content {
+        max-height: calc(100% - 50px);
+    }
+    
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    .submit-btn {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+    
+    .start-menu {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-header {
+        padding: 3px;
+    }
+    
+    .window-title {
+        font-size: 14px;
+    }
+    
+    .window-controls button {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+    }
+    
+    .desktop {
+        padding: 5px;
+    }
+    
+    .desktop-icon {
+        width: 60px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    
+    .desktop-icon i {
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .desktop-icon span {
+        font-size: 10px;
+    }
+}
